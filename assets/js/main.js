@@ -69,17 +69,16 @@ console.log(getLocalDate(new Date(1999999123456), true, true) === '2033-05-18, 0
 
 // Задание №3
 
+var getWeekDay = (d) => {
+  const date = new Date(d);
+  const days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
 
-/*
- * #3
- *
- * Создайте функцию getWeekDay(date), которая принимает дату в виде строки в формате 'yyyy-mm-dd'
- * и выводит текущий день недели: "понедельник", "вторник", … "воскресенье".
- */
+  return days[date.getDay()];
+};
 
-// console.log(getWeekDay('2019-01-30')); // среда
-// console.log(getWeekDay('2019-07-16')); // вторник
-// console.log(getWeekDay('2019-07-27')); // суббота
+console.log(getWeekDay('2019-01-30')); // среда
+console.log(getWeekDay('2019-07-16')); // вторник
+console.log(getWeekDay('2019-07-27')); // суббота
 
 /*
  * #4
