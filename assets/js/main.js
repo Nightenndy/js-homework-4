@@ -91,13 +91,22 @@ var getLocalDay = (d) => {
   return day;
 };
 
-console.log(getLocalDay('2019-07-16')); // 2
-console.log(getLocalDay('2019-07-25')); // 4
-console.log(getLocalDay('2019-07-27')); // 6
+console.log(getLocalDay('2019-07-16'));
+console.log(getLocalDay('2019-07-25'));
+console.log(getLocalDay('2019-07-27'));
 
 // Задание №5
 
+var getDateAgo = (d, days) => {
+  const date = new Date(d);
+  date.setDate(date.getDate() - days);
 
+  return date.toLocaleString().replace(/(\d.*),\s+(\d.*)/gu, '$1');
+};
+
+console.log(getDateAgo('2019-01-29', 1));
+console.log(getDateAgo('2019-01-29', 2));
+console.log(getDateAgo('2019-01-29', 365));
 /*
  * #5
  *
@@ -106,9 +115,7 @@ console.log(getLocalDay('2019-07-27')); // 6
  * Дата принимается и возвращается в формате YYYY-MM-DD.
  */
 
-// console.log(getDateAgo('2019-01-29', 1)); // 28.01.2019
-// console.log(getDateAgo('2019-01-29', 2)); // 27.01.2019
-// console.log(getDateAgo('2019-01-29', 365)); // 29.01.2018
+
 
 /*
  * #6
