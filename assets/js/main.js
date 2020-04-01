@@ -107,14 +107,8 @@ var getDateAgo = (d, days) => {
 console.log(getDateAgo('2019-01-29', 1));
 console.log(getDateAgo('2019-01-29', 2));
 console.log(getDateAgo('2019-01-29', 365));
-/*
- * #5
- *
- * Создайте функцию getDateAgo(date, days), которая возвращает дату,
- * которая была days дней назад от указанной даты date.
- * Дата принимается и возвращается в формате YYYY-MM-DD.
- */
 
+// Задание №6
 
 
 /*
