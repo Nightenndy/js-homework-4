@@ -29,20 +29,19 @@ var getLocalDate = (date, isSeconds = false, isISO = false) => {
   var res;
 
   if (!isISO) res = isSeconds
-  ? date.toLocaleString()
-  : date.toLocaleString().replace(reg, '');
-
+    ? date.toLocaleString()
+    : date.toLocaleString().replace(reg, '');
   else {
-    const year = date getFullYear();
+    const year = date.getFullYear();
     const month = date.getMonth() + 1 < 9 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
     const day = date.getDate() < 9 ? `0${date.getDate()}` : date.getDate();
     const hour = date.getHours() < 9 ? `0${date.getHours()}` : date.getHours();
     const minutes = date.getMinutes() < 9 ? `0${date.getMinutes()}` : date.getMinutes();
     const seconds = date.getSeconds() < 9 ? `0${date.getSeconds()}` : date.getSeconds();
 
-    res = isSeconds 
-    ? `${year}-${month}-${day}, ${hour}:${minutes}:${seconds}`
-    : `${year}-${month}-${day}, ${hour}:${minutes}`;
+    res = isSeconds
+      ? `${year}-${month}-${day}, ${hour}:${minutes}:${seconds}`
+      : `${year}-${month}-${day}, ${hour}:${minutes}`;
   }
 
   return res;
