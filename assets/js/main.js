@@ -67,6 +67,10 @@ console.log(getLocalDate(new Date(1999999123456), true) === '18.05.2033, 06:18:4
 console.log(getLocalDate(new Date(1999999123456), false, true) === '2033-05-18, 06:18');
 console.log(getLocalDate(new Date(1999999123456), true, true) === '2033-05-18, 06:18:43');
 
+
+// Задание №3
+
+
 /*
  * #3
  *
