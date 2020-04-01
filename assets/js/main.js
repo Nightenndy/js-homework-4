@@ -80,16 +80,23 @@ console.log(getWeekDay('2019-01-30')); // среда
 console.log(getWeekDay('2019-07-16')); // вторник
 console.log(getWeekDay('2019-07-27')); // суббота
 
-/*
- * #4
- *
- * Напишите функцию, getLocalDay(date) которая возвращает день недели для даты date.
- * День нужно возвратить в европейской нумерации, т.е. понедельник имеет номер 1, вторник номер 2, …, воскресенье – номер 7.
- */
+// Задание №4
 
-// console.log(getLocalDay('2019-07-16')); // 2
-// console.log(getLocalDay('2019-07-25')); // 4
-// console.log(getLocalDay('2019-07-27')); // 6
+var getLocalDay = (d) => {
+  const date = new Date(d);
+  var day = date.getDay();
+
+  if (day === 0) day = 7;
+
+  return day;
+};
+
+console.log(getLocalDay('2019-07-16')); // 2
+console.log(getLocalDay('2019-07-25')); // 4
+console.log(getLocalDay('2019-07-27')); // 6
+
+// Задание №5
+
 
 /*
  * #5
